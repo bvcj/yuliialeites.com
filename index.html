@@ -2,98 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YuliiaLeites.com</title>
+  <title>Practice</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-      background: #90e0ef;
-      color: #2b2b2b;
+      font-family: "Averia Serif Libre", serif;
+      background: #f8f7ff;
+      color: #000814;
       display: flex;
       justify-content: center;
     }
 
     .container {
-      max-width: 420px;
+      max-width: 520px;
       width: 100%;
-      padding: 60px 20px;
+      padding: 70px 22px;
       text-align: center;
     }
 
+    /* HEADER */
     h1 {
+      font-size: 28px;
       font-weight: 400;
-      font-size: 26px;
-      margin-bottom: 5px;
+      color: #0077b6;
+      margin-bottom: 6px;
     }
 
-    p {
-      color: #666;
+    .subtitle {
       font-size: 14px;
-      margin-bottom: 30px;
+      color: #90e0ef;
+      margin-bottom: 40px;
     }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .btn {
-      display: block;
-      padding: 14px;
-      border: 1px solid #ddd;
-      text-decoration: none;
-      color: #2b2b2b;
-      background: white;
-      border-radius: 10px;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      background: #2b2b2b;
-      color: white;
-    }
-
-    .section {
-      margin-top: 40px;
-      text-align: left;
-    }
-
-    .section h2 {
-      font-size: 14px;
+    /* SECTION TITLES */
+    h2 {
+      margin-top: 50px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #0077b6;
       font-weight: 500;
-      letter-spacing: 1px;
-      color: #888;
-      margin-bottom: 10px;
     }
 
-    .email {
-      margin-top: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    /* LINKS */
+    .link {
+      display: block;
+      margin: 12px 0;
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid #90e0ef;
+      color: #000814;
+      background: white;
+      transition: 0.2s ease;
     }
 
-    input {
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-
-    button {
-      padding: 12px;
-      border: none;
-      background: #2b2b2b;
+    .link:hover {
+      background: #0077b6;
       color: white;
-      border-radius: 8px;
-      cursor: pointer;
+      border-color: #0077b6;
+    }
+
+    /* TEXT BLOCKS */
+    .text {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 15px;
     }
 
     footer {
-      margin-top: 50px;
-      font-size: 12px;
-      color: #aaa;
+      margin-top: 70px;
+      font-size: 11px;
+      color: #90e0ef;
     }
   </style>
 </head>
@@ -102,26 +85,59 @@
 
 <div class="container">
 
-  <h1>Dr. Your Name</h1>
-  <p>Psychoanalysis & psychotherapy</p>
+  <!-- HEADER -->
+  <h1>Your Name</h1>
+  <div class="subtitle">Psychoanalysis · Writing · Research</div>
 
-  <div class="links">
-    <a class="btn" href="#">Book a Session</a>
-    <a class="btn" href="#">About Me</a>
-    <a class="btn" href="#">Approach</a>
-    <a class="btn" href="#">Contact</a>
+  <!-- ABOUT -->
+  <h2>ABOUT</h2>
+  <div class="text">
+    Psychoanalytic practice focusing on trauma, violence, gender, and political subjectivity.
   </div>
 
-  <div class="section">
-    <h2>NEWSLETTER</h2>
-    <div class="email">
-      <input type="email" placeholder="Your email">
-      <button>Subscribe</button>
-    </div>
+  <!-- PUBLICATIONS -->
+  <h2>PUBLICATIONS</h2>
+
+  <a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">
+    From Mania to Depression — e-flux
+  </a>
+
+  <a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">
+    Not Ready for the Light — The Diasporist
+  </a>
+
+  <a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">
+    Notes on Living — Spector Books
+  </a>
+
+  <!-- EVENTS -->
+  <h2>EVENTS</h2>
+
+  <div class="text">
+    Schinkel Pavillon Berlin — Book Launch & Discussion
   </div>
 
+  <a class="link" href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today" target="_blank">
+    Notes on Living — Berlin Event
+  </a>
+
+  <div class="text">
+    European Psychoanalytic Federation 39th Conference<br>
+    Panel: Neutrality, Violence and Law
+  </div>
+
+  <a class="link" href="https://www.csihamburg-meeting.de/39th-epf-annual-conference-2026/" target="_blank">
+    EPF Conference 2026
+  </a>
+
+  <div class="text">
+    IPSO Rome Annual Conference<br>
+    Panel: No Heroic Closure: War Narratives, Gender and the Unmournable
+  </div>
+
+  <!-- FOOTER -->
   <footer>
-    © 2026 Your Practice
+    © 2026 · Psychoanalytic Practice
   </footer>
 
 </div>
