@@ -51,22 +51,33 @@
 
     /* LINKS */
     .link {
-      display: block;
+      display: inline-block;
       margin: 12px 0;
-      padding: 14px 16px;
-      border-radius: 12px;
+      padding: 6px 0px;
       text-decoration: none;
-      border: 1px solid #219ebc;
       color: #000814;
-      background: white;
-      transition: 0.2s ease;
+      position: relative;
+      transition: color 0.25s ease;
     }
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #0077b6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
 
     .link:hover {
-      background: #0077b6;
-      color: white;
-      border-color: #0077b6;
+      color: #0077b6;
     }
+    .link:hover::after {
+  transform: scaleX(1);
+}
 
     /* TEXT BLOCKS */
     .text {
