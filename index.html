@@ -15,8 +15,8 @@
       font-family: "Averia Serif Libre", serif;
       background: #f8f7ff;
       color: #000814;
-      font-size: 18px; /* Set a uniform base font size for the body */
-      line-height: 1.6; /* Improve readability */
+      font-size: 18px;
+      line-height: 1.6;
       padding: 20px;
     }
 
@@ -24,14 +24,14 @@
     .container {
       width: 100%;
       max-width: 1200px;
-      margin: 0 auto; /* Center the content */
+      margin: 0 auto;
       padding: 70px 22px;
       text-align: left;
     }
 
     /* HEADER */
     h1 {
-      font-size: 28px; /* Reasonably large heading */
+      font-size: 28px;
       font-weight: 400;
       color: #0077b6;
       margin-bottom: 12px;
@@ -40,7 +40,7 @@
 
     /* Subtitle */
     .subtitle {
-      font-size: 18px; /* Same size as the body text */
+      font-size: 18px;
       color: #219ebc;
       margin-bottom: 50px;
       letter-spacing: 1px;
@@ -48,7 +48,7 @@
 
     /* SECTION TITLES */
     h2 {
-      font-size: 20px; /* Slightly bigger for section titles */
+      font-size: 20px;
       letter-spacing: 1px;
       color: #0077b6;
       font-weight: 500;
@@ -64,7 +64,7 @@
       color: #000814;
       position: relative;
       transition: color 0.25s ease;
-      font-size: 18px; /* Uniform font size for links */
+      font-size: 18px;
     }
 
     .link::after {
@@ -90,7 +90,7 @@
 
     /* Text Blocks (general text) */
     .text {
-      font-size: 18px; /* Same size for readability */
+      font-size: 18px;
       line-height: 1.6;
       margin-top: 15px;
     }
@@ -134,7 +134,7 @@
     /* Footer */
     footer {
       margin-top: 70px;
-      font-size: 14px; /* Keep footer text slightly smaller */
+      font-size: 14px;
       color: #219ebc;
     }
   </style>
@@ -155,20 +155,29 @@
 
   <!-- PUBLICATIONS -->
   <h2>PUBLICATIONS</h2>
-  <a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">
-    From Mania to Depression — e-flux
-  </a>
 
-  <a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">
-    Not Ready for the Light — The Diasporist
-  </a>
+  <!-- Each publication is now in its own block -->
+  <div class="text">
+    <a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">
+      From Mania to Depression — e-flux
+    </a>
+  </div>
 
-  <a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">
-    Notes on Living — Spector Books
-  </a>
+  <div class="text">
+    <a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">
+      Not Ready for the Light — The Diasporist
+    </a>
+  </div>
+
+  <div class="text">
+    <a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">
+      Notes on Living — Spector Books
+    </a>
+  </div>
 
   <!-- EVENTS -->
   <h2>EVENTS</h2>
+
   <div class="text">
     Schinkel Pavillon Berlin — Book Launch & Discussion
   </div>
