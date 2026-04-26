@@ -91,6 +91,42 @@
       font-size: 11px;
       color: #219ebc;
     }
+
+    .instagram {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.ig-link {
+  text-decoration: none;
+  color: #90e0ef;
+  position: relative;
+  display: inline-block;
+  transition: color 0.25s ease;
+}
+
+/* animated underline */
+.ig-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #0077b6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.ig-link:hover {
+  color: #0077b6;
+}
+
+.ig-link:hover::after {
+  transform: scaleX(1);
+}
   </style>
 </head>
 
@@ -148,6 +184,12 @@
     Panel: No Heroic Closure: War Narratives, Gender and the Unmournable
   </div>
 
+  <div class="instagram">
+  <a href="https://instagram.com/yourusername" target="_blank" class="ig-link">
+    Instagram
+  </a>
+</div>
+  
   <!-- FOOTER -->
   <footer>
     © 2026 · Yuliia Leites 
