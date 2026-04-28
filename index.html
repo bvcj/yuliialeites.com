@@ -14,68 +14,46 @@ body {
   font-family: "Averia Serif Libre", serif;
   background: #f8f7ff;
   color: #000814;
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 40px 20px;
 }
 
+/* LEFT-ALIGNED LAYOUT */
 .container {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  margin: 0;
+  padding-top: 60px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: 40px;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 26px;
   color: #0077b6;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 h2 {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   color: #0077b6;
-  margin-top: 25px;
-}
-
-/* NUMBERED LIST */
-.numbered {
-  list-style: none;
-  padding: 0;
-  margin-top: 8px;
-  counter-reset: item;
-}
-
-.numbered li {
-  counter-increment: item;
-  margin-bottom: 6px;
-  position: relative;
-  padding-left: 30px;
-}
-
-.numbered li::before {
-  content: counter(item, decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  color: #219ebc;
-  width: 25px;
+  margin-top: 30px;
 }
 
 /* SIMPLE LIST */
 .list {
   list-style: none;
   padding: 0;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* LINKS */
@@ -103,13 +81,13 @@ h2 {
 }
 
 .small {
-  font-size: 13px;
-  opacity: 0.9;
+  font-size: 15px;
+  opacity: 0.95;
 }
 
 footer {
-  margin-top: 50px;
-  font-size: 12px;
+  margin-top: 60px;
+  font-size: 13px;
   color: #219ebc;
 }
 
@@ -179,12 +157,12 @@ footer {
     <!-- RIGHT -->
     <div>
       <h2>CONTACT</h2>
-      <ul class="numbered small">
+      <ul class="list small">
         <li>yuliia@email.com</li>
       </ul>
 
       <h2>LINKS</h2>
-      <ul class="numbered">
+      <ul class="list">
         <li>
           <a class="link" href="https://www.instagram.com/sugar_prawn/" target="_blank">
             Instagram
