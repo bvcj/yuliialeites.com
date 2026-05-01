@@ -96,6 +96,11 @@ input, textarea {
   outline: none;
 }
 
+/* ✅ FIX: prevent checkbox from inheriting full width */
+input[type="checkbox"] {
+  width: auto;
+}
+
 button {
   background: #000814;
   color: white;
@@ -111,20 +116,6 @@ button {
 button:hover {
   background: white;
   color: #000814;
-}
-
-/* ✅ FIXED CHECKBOX ALIGNMENT */
-.consent {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  font-size: 13px;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.consent span {
-  flex: 1;
 }
 
 footer {
@@ -212,10 +203,10 @@ footer {
 
       <textarea id="message" rows="6" placeholder="What would you like to work on / speak about?"></textarea>
 
-      <!-- CONSENT CHECKBOX (FIXED ALIGNMENT) -->
-      <label class="consent">
-        <input type="checkbox" id="consent" style="margin-top:3px;">
-        <span>
+      <!-- CHECKBOX (FIXED + SAFE) -->
+      <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
+        <input type="checkbox" id="consent" style="margin-top:3px; width:auto;">
+        <span style="flex:1;">
           I consent to my information being used to respond to my inquiry and understand it will be kept confidential
         </span>
       </label>
