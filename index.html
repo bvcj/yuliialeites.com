@@ -27,17 +27,17 @@ body {
   transform: translateX(-50%);
   z-index: -1;
   pointer-events: none;
-  overflow: hidden;
+  overflow: visible; /* Ensure visibility of squiggles */
   width: 100%;
-  height: auto;
+  height: 300px; /* Set height to control visible space for squiggles */
 }
 
 /* 🧠 HAND-DRAWN SQUIGGLES WITH LOOPS */
 .bg-squiggle::before {
   content: "";
   position: absolute;
-  width: 250%;
-  height: 300%;
+  width: 200%;
+  height: 200%;
   left: -50%;
   top: 50%; /* Move the squiggles closer to the bottom */
 
@@ -45,15 +45,15 @@ body {
 
   background-size: cover;
   animation: drift 90s ease-in-out infinite;
-  filter: blur(0.75px);
-  opacity: 0.18;
+  filter: blur(1px); /* Increase blur for softening */
+  opacity: 0.15; /* Increase opacity for better visibility */
 }
 
 /* 🌬 Hand-drawn style motion */
 @keyframes drift {
   0%   { transform: translate(0px, 0px) scale(1); }
-  33%  { transform: translate(-15px, -10px) scale(1.02); }
-  66%  { transform: translate(25px, -20px) scale(0.98); }
+  33%  { transform: translate(-20px, -10px) scale(1.02); }
+  66%  { transform: translate(30px, -20px) scale(0.98); }
   100% { transform: translate(0px, 0px) scale(1); }
 }
 
