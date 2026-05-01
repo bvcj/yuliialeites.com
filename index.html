@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,42 +21,6 @@ body {
   padding: 40px 20px;
 }
 
-/* 🌊 BACKGROUND LAYER */
-.bg-squiggle {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-/* 🧠 ORGANIC SQUIGGLE SYSTEM (non-geometric, multi-layer) */
-.bg-squiggle::before {
-  content: "";
-  position: absolute;
-  width: 300%;
-  height: 300%;
-  left: -100%;
-  top: -100%;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cpath d='M-120 180 C100 100, 200 400, 350 200 C500 0, 600 500, 750 200 C900 -100, 1000 300, 1120 200' stroke='%2319A0DB' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.75'/%3E%3Cpath d='M-160 400 C-20 280, 200 500, 400 380 C600 260, 700 560, 900 440 C1100 320, 1200 620, 1400 500' stroke='%2319A0DB' stroke-width='2.1' fill='none' stroke-linecap='round' opacity='0.65'/%3E%3Cpath d='M-140 600 C-20 450, 180 800, 400 600 C620 400, 750 750, 900 600 C1050 450, 1200 850, 1400 720' stroke='%2319A0DB' stroke-width='1.9' fill='none' stroke-linecap='round' opacity='0.55'/%3E%3Cpath d='M0 150 C180 250, 300 -30, 480 150 C660 330, 780 0, 960 200 C1140 400, 1260 100, 1440 300' stroke='%2319A0DB' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E");
-
-  background-size: cover;
-  animation: drift 60s ease-in-out infinite;
-  filter: blur(0.75px);
-  opacity: 0.22;
-}
-
-/* 🌬 Subtle, fluid movement */
-@keyframes drift {
-  0%   { transform: translateX(0) translateY(0); }
-  25%  { transform: translateX(-10px) translateY(5px); }
-  50%  { transform: translateX(15px) translateY(-10px); }
-  75%  { transform: translateX(-5px) translateY(15px); }
-  100% { transform: translateX(0) translateY(0); }
-}
-
-/* MAIN LAYOUT */
 .container {
   max-width: 1100px;
   margin: 0;
@@ -132,6 +98,7 @@ input, textarea {
   outline: none;
 }
 
+/* ✅ FIX: prevent checkbox from inheriting full width */
 input[type="checkbox"] {
   width: auto;
 }
@@ -174,9 +141,6 @@ footer {
 
 <body>
 
-<!-- 🌊 BACKGROUND -->
-<div class="bg-squiggle"></div>
-
 <div class="container">
 
   <h1>Yuliia Leites</h1>
@@ -184,6 +148,7 @@ footer {
 
   <div class="grid">
 
+    <!-- LEFT -->
     <div>
       <h2>ABOUT</h2>
       <div class="small">
@@ -193,6 +158,7 @@ footer {
       </div>
     </div>
 
+    <!-- MIDDLE -->
     <div>
 
       <h2>PUBLICATIONS</h2>
@@ -226,6 +192,7 @@ footer {
 
     </div>
 
+    <!-- RIGHT -->
     <div>
 
       <h2>CONTACT</h2>
@@ -238,6 +205,7 @@ footer {
 
       <textarea id="message" rows="6" placeholder="What would you like to work on / speak about?"></textarea>
 
+      <!-- CHECKBOX (FIXED + SAFE) -->
       <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
         <input type="checkbox" id="consent" style="margin-top:3px; width:auto;">
         <span style="flex:1;">
