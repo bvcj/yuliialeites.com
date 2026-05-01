@@ -40,27 +40,18 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cpath d='M-120 180 C100 100, 200 400, 350 200 C500 0, 600 500, 750 200 C900 -100, 1000 300, 1120 200' stroke='%2319A0DB' stroke-width='2.4' fill='none' stroke-linecap='round' opacity='0.75'/%3E%3Cpath d='M-160 400 C-20 280, 200 500, 400 380 C600 260, 700 560, 900 440 C1100 320, 1200 620, 1400 500' stroke='%2319A0DB' stroke-width='2.1' fill='none' stroke-linecap='round' opacity='0.65'/%3E%3Cpath d='M-140 600 C-20 450, 180 800, 400 600 C620 400, 750 750, 900 600 C1050 450, 1200 850, 1400 720' stroke='%2319A0DB' stroke-width='1.9' fill='none' stroke-linecap='round' opacity='0.55'/%3E%3Cpath d='M0 150 C180 250, 300 -30, 480 150 C660 330, 780 0, 960 200 C1140 400, 1260 100, 1440 300' stroke='%2319A0DB' stroke-width='1.7' fill='none' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E");
 
   background-size: cover;
-  animation: drift 60s ease-in-out infinite, breathe 15s ease-in-out infinite;
+  animation: drift 60s ease-in-out infinite;
   filter: blur(0.75px);
   opacity: 0.22;
 }
 
-/* 🌬 more organic motion (less mechanical, more “breathing system”) */
+/* 🌬 Subtle, fluid movement */
 @keyframes drift {
-  0%   { transform: translate(0px, 0px) scale(1); }
-  25%  { transform: translate(-30px, -10px) scale(1.02); }
-  50%  { transform: translate(20px, -35px) scale(0.98); }
-  75%  { transform: translate(-10px, 25px) scale(1.05); }
-  100% { transform: translate(0px, 0px) scale(1); }
-}
-
-/* BREATHE ANIMATION for more organic, slow pulsation effect */
-@keyframes breathe {
-  0%   { transform: scale(1) translate(0px, 0px); }
-  25%  { transform: scale(1.05) translate(-10px, 5px); }
-  50%  { transform: scale(1.02) translate(15px, -20px); }
-  75%  { transform: scale(1.05) translate(-20px, 10px); }
-  100% { transform: scale(1) translate(0px, 0px); }
+  0%   { transform: translateX(0) translateY(0); }
+  25%  { transform: translateX(-10px) translateY(5px); }
+  50%  { transform: translateX(15px) translateY(-10px); }
+  75%  { transform: translateX(-5px) translateY(15px); }
+  100% { transform: translateX(0) translateY(0); }
 }
 
 /* MAIN LAYOUT */
