@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +26,25 @@ body {
   padding-left: 40px;
 }
 
+/* 
+   调整了网格列宽比例 (Adjusted column width ratios): 
+   - Left (About) stays compact at 1fr.
+   - Middle (Publications/Events) expands to 1.6fr so links stay on one line.
+   - Right (Contact) is tightly controlled at 1fr.
+*/
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.6fr 1fr;
   gap: 40px;
+}
+
+/* 
+   让联系栏内容靠左对齐 (Forces contact content to align to the left side of its track) 
+*/
+.contact-column {
+  justify-self: start;
+  width: 100%;
+  max-width: 320px; /* Prevents input fields from stretching too wide */
 }
 
 h1 {
@@ -54,10 +67,14 @@ h2 {
   opacity: 0.95;
 }
 
+/* 
+   确保列表文本不会换行 (Prevents text wrapping for list links)
+*/
 .list {
   list-style: none;
   padding: 0;
   margin-top: 10px;
+  white-space: nowrap; 
 }
 
 .list li {
@@ -96,6 +113,7 @@ input, textarea {
   border: 1px solid #ccc;
   background: transparent;
   outline: none;
+  box-sizing: border-box; /* Ensures padding doesn't break full-width inputs */
 }
 
 /* ✅ FIX: prevent checkbox from inheriting full width */
@@ -133,6 +151,10 @@ footer {
 
   .container {
     padding-left: 20px;
+  }
+  
+  .list {
+    white-space: normal; /* Allows text wrapping on small screens/mobile */
   }
 }
 
@@ -193,8 +215,8 @@ footer {
 
     </div>
 
-    <!-- RIGHT -->
-    <div>
+    <!-- RIGHT (Added 'contact-column' class here) -->
+    <div class="contact-column">
 
       <h2>CONTACT</h2>
 
@@ -209,7 +231,7 @@ footer {
       <!-- CHECKBOX (FIXED + SAFE) -->
       <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
         <input type="checkbox" id="consent" style="margin-top:3px; width:auto;">
-        <span style="flex:1;">
+        <span style="flex:1; white-space: normal;">
           I consent to my information being used to respond to my inquiry and understand it will be kept confidential
         </span>
       </label>
