@@ -56,6 +56,11 @@ h2 {
   opacity: 0.95;
 }
 
+.about-text {
+  line-height: 1.9;
+  max-width: 95%;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -162,7 +167,11 @@ footer {
 
   .small {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
+  }
+
+  .about-text {
+    max-width: 100%;
   }
 
   .list {
@@ -203,19 +212,29 @@ footer {
 <div class="container">
 
   <h1>Yuliia Leites</h1>
-  <div class="small">Psychoanalysis Psychotherapist</div>
+
+  <div class="small">
+    Psychoanalysis Psychotherapist
+  </div>
 
   <div class="grid">
 
     <!-- LEFT COLUMN -->
+
     <div>
 
       <h2>ABOUT</h2>
 
-      <div class="small">
+      <div class="small about-text">
 
         Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine, and a candidate of the International Psychoanalytical Association (IPA).
+
+        <br><br>
+
         Her practice sits at the fracture points of war and social upheaval — with civilians, soldiers and queer people.
+
+        <br><br>
+
         As a member of the Ukrainian Psychedelic Research Association (UPRA), she brings psychoanalytic thinking into psychedelic-assisted therapy — a radical method for a radical age.
 
       </div>
@@ -223,6 +242,7 @@ footer {
     </div>
 
     <!-- MIDDLE COLUMN -->
+
     <div>
 
       <h2>PUBLICATIONS</h2>
@@ -288,6 +308,7 @@ footer {
     </div>
 
     <!-- RIGHT COLUMN -->
+
     <div>
 
       <h2>CONTACT</h2>
@@ -296,19 +317,25 @@ footer {
         Clinical inquiries / therapeutic work
       </div>
 
-      <input type="text"
-             id="name"
-             placeholder="Your name">
+      <input
+        type="text"
+        id="name"
+        placeholder="Your name"
+      >
 
-      <textarea id="message"
-                rows="6"
-                placeholder="What would you like to work on / speak about?"></textarea>
+      <textarea
+        id="message"
+        rows="6"
+        placeholder="What would you like to work on / speak about?"
+      ></textarea>
 
       <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
 
-        <input type="checkbox"
-               id="consent"
-               style="margin-top:3px; width:auto;">
+        <input
+          type="checkbox"
+          id="consent"
+          style="margin-top:3px; width:auto;"
+        >
 
         <span style="flex:1; white-space: normal;">
           I consent to my information being used to respond to my inquiry and understand it will be kept confidential
