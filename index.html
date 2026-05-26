@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- MOBILE RESPONSIVE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="theme-color" content="#0077b6">
 <title>Yuliia Leites</title>
 
@@ -20,8 +24,8 @@ body {
 }
 
 .container {
-  max-width: 1300px; 
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-left: 40px;
 }
@@ -29,7 +33,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1.6fr 1.5fr;
-  gap: 50px; 
+  gap: 50px;
 }
 
 h1 {
@@ -56,7 +60,7 @@ h2 {
   list-style: none;
   padding: 0;
   margin-top: 10px;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .list li {
@@ -86,7 +90,8 @@ h2 {
   transform: scaleX(1);
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 8px;
@@ -125,22 +130,68 @@ footer {
   color: #000814;
 }
 
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+/* MOBILE VERSION */
+
+@media (max-width: 900px) {
+
+  body {
+    padding: 20px 16px;
+    font-size: 15px;
   }
 
   .container {
-    padding-left: 20px;
+    padding-top: 20px;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .small {
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .list {
-    white-space: normal; 
+    white-space: normal;
   }
-  
-  input, textarea, button {
-    max-width: 500px;
+
+  .list li {
+    margin-bottom: 12px;
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  textarea {
+    min-height: 140px;
+  }
+
+  button {
+    padding: 12px;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 12px;
   }
 }
 
@@ -161,7 +212,9 @@ footer {
       <h2>ABOUT</h2>
       <div class="small">
         Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine, and a candidate of the International Psychoanalytical Association (IPA).<br><br>
+
         Her practice sits at the fracture points of war and social upheaval — with civilians, soldiers and queer people.<br><br>
+
         As a member of the Ukrainian Psychedelic Research Association (UPRA), she brings psychoanalytic thinking into psychedelic-assisted therapy — a radical method for a radical age.
       </div>
     </div>
@@ -170,48 +223,68 @@ footer {
     <div>
 
       <h2>PUBLICATIONS</h2>
+
       <ul class="list">
+
         <li>
-          <a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">
+          <a class="link"
+             href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine"
+             target="_blank">
             From Mania to Depression — e-flux
           </a>
         </li>
+
         <li>
-          <a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">
+          <a class="link"
+             href="https://thediasporist.de/not-ready-for-the-light/"
+             target="_blank">
             Not Ready for the Light — The Diasporist
           </a>
         </li>
+
         <li>
-          <a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">
+          <a class="link"
+             href="https://www.spectorbooks.com/book/notes-on-living"
+             target="_blank">
             Notes on Living — Spector Books
           </a>
         </li>
+
       </ul>
 
       <h2>EVENTS</h2>
+
       <ul class="list">
-        <!-- Added Link for IPSO Conference -->
+
         <li>
-          <a class="link" href="https://www.instagram.com/p/DQLzSRUDVIu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+          <a class="link"
+             href="https://www.instagram.com/p/DQLzSRUDVIu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+             target="_blank">
             IPSO Conference — Rome, Italy
           </a>
         </li>
+
         <li>
-          <a class="link" href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today" target="_blank">
+          <a class="link"
+             href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today"
+             target="_blank">
             Schinkel Pavillon Book Launch & Discussion — Berlin, Germany
           </a>
         </li>
-        <!-- Added Link for EPF Conference -->
+
         <li>
-          <a class="link" href="https://www.instagram.com/p/DVgA_xtDctD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+          <a class="link"
+             href="https://www.instagram.com/p/DVgA_xtDctD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+             target="_blank">
             European Psychoanalytic Federation Conference 2026 — Oslo, Norway
           </a>
         </li>
+
       </ul>
 
     </div>
 
-    <!-- RIGHT COLUMN (EXTENDED WIDTH) -->
+    <!-- RIGHT COLUMN -->
     <div>
 
       <h2>CONTACT</h2>
@@ -222,32 +295,46 @@ footer {
 
       <input type="text" id="name" placeholder="Your name">
 
-      <textarea id="message" rows="6" placeholder="What would you like to work on / speak about?"></textarea>
+      <textarea id="message"
+                rows="6"
+                placeholder="What would you like to work on / speak about?"></textarea>
 
       <!-- CHECKBOX -->
+
       <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
-        <input type="checkbox" id="consent" style="margin-top:3px; width:auto;">
+
+        <input type="checkbox"
+               id="consent"
+               style="margin-top:3px; width:auto;">
+
         <span style="flex:1; white-space: normal;">
           I consent to my information being used to respond to my inquiry and understand it will be kept confidential
         </span>
+
       </label>
 
       <button onclick="sendEmail()">Send Inquiry</button>
 
       <div class="small" style="margin-bottom:15px;">
         Direct email: <br>
+
         <a class="link" href="mailto:yuliialeites@gmail.com">
           yuliialeites@gmail.com
         </a>
       </div>
 
       <h2>LINKS</h2>
+
       <ul class="list">
+
         <li>
-          <a class="link" href="https://www.instagram.com/sugar_prawn/" target="_blank">
+          <a class="link"
+             href="https://www.instagram.com/sugar_prawn/"
+             target="_blank">
             Instagram
           </a>
         </li>
+
       </ul>
 
     </div>
@@ -261,7 +348,9 @@ footer {
 </div>
 
 <script>
+
 function sendEmail() {
+
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
   const consent = document.getElementById("consent").checked;
@@ -271,15 +360,22 @@ function sendEmail() {
     return;
   }
 
-  const subject = encodeURIComponent("Clinical Inquiry from " + name);
+  const subject = encodeURIComponent(
+    "Clinical Inquiry from " + name
+  );
+
   const body = encodeURIComponent(
     "Name: " + name + "\n\n" +
     "Inquiry:\n" + message
   );
 
   window.location.href =
-    "mailto:yuliialeites@gmail.com?subject=" + subject + "&body=" + body;
+    "mailto:yuliialeites@gmail.com?subject=" +
+    subject +
+    "&body=" +
+    body;
 }
+
 </script>
 
 </body>
