@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- MOBILE RESPONSIVE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="theme-color" content="#0077b6">
@@ -56,9 +55,14 @@ h2 {
   opacity: 0.95;
 }
 
+/* UPDATED ABOUT TEXT */
 .about-text {
-  line-height: 1.9;
-  max-width: 95%;
+  line-height: 1.55; /* reduced spacing */
+  max-width: 100%;
+}
+
+.wider-about {
+  padding-right: 60px; /* makes text feel wider horizontally */
 }
 
 .list {
@@ -135,6 +139,30 @@ footer {
   color: #000814;
 }
 
+/* FADE IN ANIMATION */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 1.4s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.5s; }
+.delay-3 { animation-delay: 0.8s; }
+.delay-4 { animation-delay: 1.1s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* MOBILE VERSION */
 
 @media (max-width: 900px) {
@@ -168,10 +196,6 @@ footer {
   .small {
     font-size: 14px;
     line-height: 1.7;
-  }
-
-  .about-text {
-    max-width: 100%;
   }
 
   .list {
@@ -211,13 +235,13 @@ footer {
 
 <div class="container">
 
-  <h1>Yuliia Leites</h1>
+  <h1 class="fade-in">Yuliia Leites</h1>
 
-  <div class="small">
+  <div class="small fade-in delay-1">
     Psychoanalysis Psychotherapist
   </div>
 
-  <div class="grid">
+  <div class="grid fade-in delay-2">
 
     <!-- LEFT COLUMN -->
 
@@ -225,7 +249,7 @@ footer {
 
       <h2>ABOUT</h2>
 
-      <div class="small about-text">
+      <div class="small about-text wider-about">
 
         Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine, and a candidate of the International Psychoanalytical Association (IPA).
 
@@ -317,67 +341,42 @@ footer {
         Clinical inquiries / therapeutic work
       </div>
 
-      <input
-        type="text"
-        id="name"
-        placeholder="Your name"
-      >
+      <input type="text" id="name" placeholder="Your name">
 
-      <textarea
-        id="message"
-        rows="6"
-        placeholder="What would you like to work on / speak about?"
-      ></textarea>
+      <textarea id="message" rows="6" placeholder="What would you like to work on / speak about?"></textarea>
 
       <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
-
-        <input
-          type="checkbox"
-          id="consent"
-          style="margin-top:3px; width:auto;"
-        >
-
+        <input type="checkbox" id="consent" style="margin-top:3px; width:auto;">
         <span style="flex:1; white-space: normal;">
           I consent to my information being used to respond to my inquiry and understand it will be kept confidential
         </span>
-
       </label>
 
-      <button onclick="sendEmail()">
-        Send Inquiry
-      </button>
+      <button onclick="sendEmail()">Send Inquiry</button>
 
       <div class="small" style="margin-bottom:15px;">
-
         Direct email:
         <br>
-
-        <a class="link"
-           href="mailto:yuliialeites@gmail.com">
+        <a class="link" href="mailto:yuliialeites@gmail.com">
           yuliialeites@gmail.com
         </a>
-
       </div>
 
       <h2>LINKS</h2>
 
       <ul class="list">
-
         <li>
-          <a class="link"
-             href="https://www.instagram.com/sugar_prawn/"
-             target="_blank">
+          <a class="link" href="https://www.instagram.com/sugar_prawn/" target="_blank">
             Instagram
           </a>
         </li>
-
       </ul>
 
     </div>
 
   </div>
 
-  <footer>
+  <footer class="fade-in delay-4">
     © 2026 · Yuliia Leites
   </footer>
 
@@ -396,20 +395,14 @@ function sendEmail() {
     return;
   }
 
-  const subject = encodeURIComponent(
-    "Clinical Inquiry from " + name
-  );
+  const subject = encodeURIComponent("Clinical Inquiry from " + name);
 
   const body = encodeURIComponent(
-    "Name: " + name + "\n\n" +
-    "Inquiry:\n" + message
+    "Name: " + name + "\n\nInquiry:\n" + message
   );
 
   window.location.href =
-    "mailto:yuliialeites@gmail.com?subject=" +
-    subject +
-    "&body=" +
-    body;
+    "mailto:yuliialeites@gmail.com?subject=" + subject + "&body=" + body;
 }
 
 </script>
