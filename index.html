@@ -29,9 +29,10 @@ body {
   padding-left: 20px;
 }
 
+/* UPDATED: wider left column */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1.6fr 1.5fr;
+  grid-template-columns: 1.4fr 1.6fr 1.5fr;
   gap: 50px;
 }
 
@@ -55,7 +56,6 @@ h2 {
   opacity: 0.95;
 }
 
-/* FIXED ABOUT SECTION */
 .about-text {
   line-height: 1.6;
   width: 100%;
@@ -241,29 +241,34 @@ footer {
   <div class="grid fade-in delay-2">
 
     <!-- LEFT COLUMN -->
-
     <div>
 
       <h2>ABOUT</h2>
 
       <div class="small about-text">
 
-        Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine, and a candidate of the International Psychoanalytical Association (IPA).
+        <!-- 3 LINES -->
+        Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine,<br>
+        and a candidate of the International Psychoanalytical Association<br>
+        (IPA).<br><br>
 
-        <br><br>
+        <!-- 3 LINES -->
+        Her practice sits at the fracture points of war and social upheaval —<br>
+        with civilians, soldiers<br>
+        and queer people.<br><br>
 
-        Her practice sits at the fracture points of war and social upheaval — with civilians, soldiers and queer people.
-
-        <br><br>
-
-        As a member of the Ukrainian Psychedelic Research Association (UPRA), she brings psychoanalytic thinking into psychedelic-assisted therapy — a radical method for a radical age.
+        <!-- 5 LINES -->
+        As a member of the Ukrainian Psychedelic Research Association (UPRA),<br>
+        she brings psychoanalytic thinking into psychedelic-assisted therapy —<br>
+        working at the intersection of trauma, language,<br>
+        body, and collective experience.<br>
+        A radical method for a radical age.
 
       </div>
 
     </div>
 
     <!-- MIDDLE COLUMN -->
-
     <div>
 
       <h2>PUBLICATIONS</h2>
@@ -329,7 +334,6 @@ footer {
     </div>
 
     <!-- RIGHT COLUMN -->
-
     <div>
 
       <h2>CONTACT</h2>
@@ -393,10 +397,7 @@ function sendEmail() {
   }
 
   const subject = encodeURIComponent("Clinical Inquiry from " + name);
-
-  const body = encodeURIComponent(
-    "Name: " + name + "\n\nInquiry:\n" + message
-  );
+  const body = encodeURIComponent("Name: " + name + "\n\nInquiry:\n" + message);
 
   window.location.href =
     "mailto:yuliialeites@gmail.com?subject=" + subject + "&body=" + body;
