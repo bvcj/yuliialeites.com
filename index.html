@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0077b6">
-
 <title>Yuliia Leites</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
@@ -18,57 +16,51 @@ body {
   background: #fefcfb;
   color: #000814;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.6;
   padding: 40px 20px;
 }
-
-/* ✅ wider + more natural page width */
+  
 .container {
-  max-width: 1400px;
+  max-width: 1350px;
   margin: 0 auto;
   padding-top: 60px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-/* ✅ better balance for reading (less cramped columns) */
 .grid {
   display: grid;
-  grid-template-columns: 1.6fr 1.8fr 1.4fr;
-  gap: 60px;
+  grid-template-columns: 1.5fr 1.7fr 1.5fr;
+  gap: 70px;
 }
 
 h1 {
   font-size: 26px;
-  color: #000814;
-  margin-bottom: 12px;
   font-weight: 400;
+  margin-bottom: 12px;
 }
 
 h2 {
   font-size: 15px;
   letter-spacing: 1px;
-  color: #000814;
-  margin-top: 30px;
   font-weight: 400;
+  margin-top: 30px;
 }
 
 .small {
   font-size: 15px;
-  opacity: 0.95;
 }
 
-/* ✅ IMPORTANT: more readable paragraph width */
+/* ✅ FIX: readable line width without breaking layout */
 .about-text {
   line-height: 1.75;
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .list {
   list-style: none;
   padding: 0;
   margin-top: 10px;
-  white-space: normal; /* better readability */
 }
 
 .list li {
@@ -111,6 +103,10 @@ textarea {
   box-sizing: border-box;
 }
 
+input[type="checkbox"] {
+  width: auto;
+}
+
 button {
   background: #000814;
   color: white;
@@ -131,10 +127,9 @@ button:hover {
 footer {
   margin-top: 60px;
   font-size: 13px;
-  color: #000814;
 }
 
-/* fade */
+/* ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(12px);
@@ -147,17 +142,11 @@ footer {
 .delay-4 { animation-delay: 1.1s; }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* MOBILE */
+/* MOBILE (UNCHANGED behavior, just safe fallback) */
 @media (max-width: 900px) {
 
   body {
@@ -197,56 +186,126 @@ footer {
 
     <!-- LEFT -->
     <div>
+
       <h2>ABOUT</h2>
 
       <div class="small about-text">
+
         Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine, and a candidate of the International Psychoanalytical Association (IPA).<br><br>
 
         Her practice sits at the fracture points of war and social upheaval — with civilians, soldiers and queer people.<br><br>
 
         As a member of the Ukrainian Psychedelic Research Association (UPRA), she brings psychoanalytic thinking into psychedelic-assisted therapy — a radical method for a radical age.
+
       </div>
+
     </div>
 
     <!-- MIDDLE -->
     <div>
+
       <h2>PUBLICATIONS</h2>
+
       <ul class="list">
-        <li><a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">From Mania to Depression — e-flux</a></li>
-        <li><a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">Not Ready for the Light — The Diasporist</a></li>
-        <li><a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">Notes on Living — Spector Books</a></li>
+
+        <li>
+          <a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">
+            From Mania to Depression — e-flux
+          </a>
+        </li>
+
+        <li>
+          <a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">
+            Not Ready for the Light — The Diasporist
+          </a>
+        </li>
+
+        <li>
+          <a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">
+            Notes on Living — Spector Books
+          </a>
+        </li>
+
       </ul>
 
       <h2>EVENTS</h2>
+
       <ul class="list">
-        <li><a class="link" href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today" target="_blank">
-          Schinkel Pavillon — Berlin
-        </a></li>
+
+        <li>
+          <a class="link" href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today" target="_blank">
+            Schinkel Pavillon Book Launch — Berlin
+          </a>
+        </li>
+
+        <li>
+          <a class="link" href="https://www.instagram.com/p/DVgA_xtDctD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+            EPF Conference 2026 — Oslo
+          </a>
+        </li>
+
       </ul>
+
     </div>
 
     <!-- RIGHT -->
     <div>
+
       <h2>CONTACT</h2>
 
+      <div class="small" style="margin-bottom:10px;">
+        Clinical inquiries / therapeutic work
+      </div>
+
       <input type="text" id="name" placeholder="Your name">
-      <textarea id="message" rows="6" placeholder="What would you like to work on?"></textarea>
+
+      <textarea id="message" rows="6" placeholder="What would you like to work on / speak about?"></textarea>
+
+      <label style="display:flex; gap:8px; font-size:13px; margin-bottom:15px;">
+        <input type="checkbox" id="consent" style="margin-top:3px;">
+        <span>I consent to my information being used to respond to my inquiry and understand it will be kept confidential</span>
+      </label>
 
       <button onclick="sendEmail()">Send Inquiry</button>
 
       <div class="small">
-        <a class="link" href="mailto:yuliialeites@gmail.com">yuliialeites@gmail.com</a>
+        Direct email:<br>
+        <a class="link" href="mailto:yuliialeites@gmail.com">
+          yuliialeites@gmail.com
+        </a>
       </div>
+
+      <h2>LINKS</h2>
+
+      <ul class="list">
+        <li>
+          <a class="link" href="https://www.instagram.com/sugar_prawn/" target="_blank">
+            Instagram
+          </a>
+        </li>
+      </ul>
+
     </div>
 
   </div>
 
+  <footer class="fade-in delay-4">
+    © 2026 · Yuliia Leites
+  </footer>
+
 </div>
 
 <script>
+
 function sendEmail() {
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
+  const consent = document.getElementById("consent").checked;
+
+  if (!consent) {
+    alert("Please confirm consent before sending your inquiry.");
+    return;
+  }
 
   const subject = encodeURIComponent("Clinical Inquiry from " + name);
   const body = encodeURIComponent("Name: " + name + "\n\nInquiry:\n" + message);
@@ -254,6 +313,7 @@ function sendEmail() {
   window.location.href =
     "mailto:yuliialeites@gmail.com?subject=" + subject + "&body=" + body;
 }
+
 </script>
 
 </body>
