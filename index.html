@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="theme-color" content="#0077b6">
+
 <title>Yuliia Leites</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
@@ -18,22 +18,24 @@ body {
   background: #fefcfb;
   color: #000814;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.65;
   padding: 40px 20px;
 }
 
+/* ✅ wider + more natural page width */
 .container {
-  max-width: 1200px;
-  margin: 0;
+  max-width: 1400px;
+  margin: 0 auto;
   padding-top: 60px;
-  padding-left: 20px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* UPDATED: wider left column */
+/* ✅ better balance for reading (less cramped columns) */
 .grid {
   display: grid;
-  grid-template-columns: 1.4fr 1.6fr 1.5fr;
-  gap: 50px;
+  grid-template-columns: 1.6fr 1.8fr 1.4fr;
+  gap: 60px;
 }
 
 h1 {
@@ -56,17 +58,17 @@ h2 {
   opacity: 0.95;
 }
 
+/* ✅ IMPORTANT: more readable paragraph width */
 .about-text {
-  line-height: 1.6;
-  width: 100%;
-  max-width: none;
+  line-height: 1.75;
+  max-width: 520px;
 }
 
 .list {
   list-style: none;
   padding: 0;
   margin-top: 10px;
-  white-space: nowrap;
+  white-space: normal; /* better readability */
 }
 
 .list li {
@@ -109,10 +111,6 @@ textarea {
   box-sizing: border-box;
 }
 
-input[type="checkbox"] {
-  width: auto;
-}
-
 button {
   background: #000814;
   color: white;
@@ -136,8 +134,7 @@ footer {
   color: #000814;
 }
 
-/* FADE IN ANIMATION */
-
+/* fade */
 .fade-in {
   opacity: 0;
   transform: translateY(12px);
@@ -160,8 +157,7 @@ footer {
   }
 }
 
-/* MOBILE VERSION */
-
+/* MOBILE */
 @media (max-width: 900px) {
 
   body {
@@ -171,8 +167,6 @@ footer {
 
   .container {
     padding-top: 20px;
-    padding-left: 0;
-    max-width: 100%;
   }
 
   .grid {
@@ -180,49 +174,10 @@ footer {
     gap: 36px;
   }
 
-  h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  h2 {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-
-  .small {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .list {
-    white-space: normal;
-  }
-
-  .list li {
-    margin-bottom: 12px;
-  }
-
-  input,
-  textarea,
-  button {
-    width: 100%;
+  .about-text {
     max-width: 100%;
-    font-size: 16px;
   }
 
-  textarea {
-    min-height: 140px;
-  }
-
-  button {
-    padding: 12px;
-  }
-
-  footer {
-    margin-top: 40px;
-    font-size: 12px;
-  }
 }
 
 </style>
@@ -240,161 +195,58 @@ footer {
 
   <div class="grid fade-in delay-2">
 
-    <!-- LEFT COLUMN -->
+    <!-- LEFT -->
     <div>
-
       <h2>ABOUT</h2>
 
       <div class="small about-text">
+        Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine, and a candidate of the International Psychoanalytical Association (IPA).<br><br>
 
-        <!-- 3 LINES -->
-        Yuliia Leites is a psychoanalytic psychotherapist from Kyiv, Ukraine,<br>
-        and a candidate of the International Psychoanalytical Association<br>
-        (IPA).<br><br>
+        Her practice sits at the fracture points of war and social upheaval — with civilians, soldiers and queer people.<br><br>
 
-        <!-- 3 LINES -->
-        Her practice sits at the fracture points of war and social upheaval —<br>
-        with civilians, soldiers<br>
-        and queer people.<br><br>
-
-        <!-- 5 LINES -->
-        As a member of the Ukrainian Psychedelic Research Association (UPRA),<br>
-        she brings psychoanalytic thinking into psychedelic-assisted therapy —<br>
-        working at the intersection of trauma, language,<br>
-        body, and collective experience.<br>
-        A radical method for a radical age.
-
+        As a member of the Ukrainian Psychedelic Research Association (UPRA), she brings psychoanalytic thinking into psychedelic-assisted therapy — a radical method for a radical age.
       </div>
-
     </div>
 
-    <!-- MIDDLE COLUMN -->
+    <!-- MIDDLE -->
     <div>
-
       <h2>PUBLICATIONS</h2>
-
       <ul class="list">
-
-        <li>
-          <a class="link"
-             href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine"
-             target="_blank">
-            From Mania to Depression — e-flux
-          </a>
-        </li>
-
-        <li>
-          <a class="link"
-             href="https://thediasporist.de/not-ready-for-the-light/"
-             target="_blank">
-            Not Ready for the Light — The Diasporist
-          </a>
-        </li>
-
-        <li>
-          <a class="link"
-             href="https://www.spectorbooks.com/book/notes-on-living"
-             target="_blank">
-            Notes on Living — Spector Books
-          </a>
-        </li>
-
+        <li><a class="link" href="https://www.e-flux.com/notes/6783384/from-mania-to-depression-full-scale-war-in-ukraine" target="_blank">From Mania to Depression — e-flux</a></li>
+        <li><a class="link" href="https://thediasporist.de/not-ready-for-the-light/" target="_blank">Not Ready for the Light — The Diasporist</a></li>
+        <li><a class="link" href="https://www.spectorbooks.com/book/notes-on-living" target="_blank">Notes on Living — Spector Books</a></li>
       </ul>
 
       <h2>EVENTS</h2>
-
       <ul class="list">
-
-        <li>
-          <a class="link"
-             href="https://www.instagram.com/p/DQLzSRUDVIu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-             target="_blank">
-            IPSO Conference — Rome, Italy
-          </a>
-        </li>
-
-        <li>
-          <a class="link"
-             href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today"
-             target="_blank">
-            Schinkel Pavillon Book Launch & Discussion — Berlin, Germany
-          </a>
-        </li>
-
-        <li>
-          <a class="link"
-             href="https://www.instagram.com/p/DVgA_xtDctD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-             target="_blank">
-            European Psychoanalytic Federation Conference 2026 — Oslo, Norway
-          </a>
-        </li>
-
+        <li><a class="link" href="https://www.schinkelpavillon.de/event/booklaunch-panel-discussion-notes-on-living-reflections-on-ukraine-today" target="_blank">
+          Schinkel Pavillon — Berlin
+        </a></li>
       </ul>
-
     </div>
 
-    <!-- RIGHT COLUMN -->
+    <!-- RIGHT -->
     <div>
-
       <h2>CONTACT</h2>
 
-      <div class="small" style="margin-bottom:10px;">
-        Clinical inquiries / therapeutic work
-      </div>
-
       <input type="text" id="name" placeholder="Your name">
-
-      <textarea id="message" rows="6" placeholder="What would you like to work on / speak about?"></textarea>
-
-      <label style="display:flex; align-items:flex-start; gap:8px; font-size:13px; margin-bottom:15px; width:100%;">
-        <input type="checkbox" id="consent" style="margin-top:3px; width:auto;">
-        <span style="flex:1; white-space: normal;">
-          I consent to my information being used to respond to my inquiry and understand it will be kept confidential
-        </span>
-      </label>
+      <textarea id="message" rows="6" placeholder="What would you like to work on?"></textarea>
 
       <button onclick="sendEmail()">Send Inquiry</button>
 
-      <div class="small" style="margin-bottom:15px;">
-        Direct email:
-        <br>
-        <a class="link" href="mailto:yuliialeites@gmail.com">
-          yuliialeites@gmail.com
-        </a>
+      <div class="small">
+        <a class="link" href="mailto:yuliialeites@gmail.com">yuliialeites@gmail.com</a>
       </div>
-
-      <h2>LINKS</h2>
-
-      <ul class="list">
-        <li>
-          <a class="link" href="https://www.instagram.com/sugar_prawn/" target="_blank">
-            Instagram
-          </a>
-        </li>
-      </ul>
-
     </div>
 
   </div>
 
-  <footer class="fade-in delay-4">
-    © 2026 · Yuliia Leites
-  </footer>
-
 </div>
 
 <script>
-
 function sendEmail() {
-
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
-  const consent = document.getElementById("consent").checked;
-
-  if (!consent) {
-    alert("Please confirm consent before sending your inquiry.");
-    return;
-  }
 
   const subject = encodeURIComponent("Clinical Inquiry from " + name);
   const body = encodeURIComponent("Name: " + name + "\n\nInquiry:\n" + message);
@@ -402,7 +254,6 @@ function sendEmail() {
   window.location.href =
     "mailto:yuliialeites@gmail.com?subject=" + subject + "&body=" + body;
 }
-
 </script>
 
 </body>
